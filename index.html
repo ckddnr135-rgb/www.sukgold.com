@@ -1,31 +1,63 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>대출 한도 상담</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>대출 한도 상담 안내</title>
 <style>
-body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; }
-.header { background:#2563eb; color:white; padding:20px; font-size:24px; }
-.hero { padding:20px; }
-.btn { display:block; width:80%; max-width:300px; margin:10px auto; padding:15px; text-decoration:none; color:white; border-radius:8px; }
-.kakao { background:#FEE500; color:#000; }
-.telegram { background:#229ED9; }
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:#f5f7fa;color:#111}
+  .header{background:linear-gradient(90deg,#bfa24a,#e6d28a,#bfa24a);color:#111;padding:22px;text-align:center;font-size:22px;font-weight:800}
+  .hero{padding:28px 16px;text-align:center}
+  .notice{background:#fff7cc;border:1px solid #ead27a;max-width:640px;margin:14px auto;padding:16px;border-radius:14px;font-size:14px}
+  .container{max-width:640px;margin:22px auto;padding:0 16px}
+  .box{background:linear-gradient(180deg,#fff7d6,#f1e2a6);border-radius:18px;padding:20px;box-shadow:0 18px 40px rgba(0,0,0,.18);border:1px solid #e7cf73}
+  input{width:100%;padding:14px;margin:9px 0;border-radius:12px;border:1px solid #d8c06a}
+  .btn{display:block;margin:14px 0;padding:15px;border-radius:14px;text-decoration:none;font-weight:800;text-align:center}
+  .primary{background:#000;color:#fff}
+  .kakao{background:#FEE500;color:#3b1e1e}
+  .telegram{background:#229ED9;color:#fff}
+  .footer{font-size:12px;color:#666;text-align:center;margin:26px 0}
 </style>
+<script>
+function sendToChat(){
+  window.open("https://open.kakao.com/o/sO2rfV7h");
+}
+</script>
 </head>
 <body>
+  <div class="header">삶이 힘든 분들을 위한 상담</div>
 
-<div class="header">대출 한도 상담 안내</div>
+  <section class="hero">
+    <h1>대출 한도 및 조건 상담</h1>
+    <p>현재 상황 기준으로 가능한 범위만 안내드립니다.</p>
+  </section>
 
-<img src="main.jpg" style="width:100%; max-width:600px; display:block; margin:20px auto;">
+  <div class="notice">
+    ✔ 상담은 무료이며 진행을 강요하지 않습니다<br />
+    ✔ 신용점수에 영향 없는 범위에서 안내드립니다
+  </div>
 
-<div class="hero">
-<h1>대출 한도 및 조건 상담</h1>
-<p>현재 상황 기준으로 가능한 범위만 안내드립니다.<br>
-상담은 무료이며 강요하지 않습니다.</p>
-</div>
+  <div class="container">
+    <div class="box">
+      <h2>안심 한도 조회</h2>
+      <p style="font-size:13px">전화 통화가 불편하신 경우 카카오톡·텔레그램 상담이 가능합니다.</p>
 
-<a href="https://open.kakao.com/o/sO2rfV7h" class="btn kakao" target="_blank">💬 카카오톡 상담</a>
-<a href="https://t.me/bestmoney707" class="btn telegram" target="_blank">✈️ 텔레그램 상담</a>
+      <input type="text" placeholder="이름">
+      <input type="tel" placeholder="연락처">
+      <input type="text" placeholder="직업">
+      <input type="text" placeholder="지역">
+      <input type="number" placeholder="필요금액 (만원)">
 
+      <a class="btn primary" href="#" onclick="sendToChat()">상담 요청하기</a>
+    </div>
+
+    <div class="box" style="margin-top:16px">
+      <h2>상담사 바로 연결</h2>
+      <a class="btn kakao" target="_blank" href="https://open.kakao.com/o/sO2rfV7h">💬 카카오톡 오픈채팅 상담</a>
+      <a class="btn telegram" target="_blank" href="https://t.me/bestmoney707">✈️ 텔레그램 상담 연결</a>
+    </div>
+  </div>
+
+  <div class="footer">본 페이지는 금융상품 판매가 아닌 상담 안내 페이지입니다.</div>
 </body>
 </html>
